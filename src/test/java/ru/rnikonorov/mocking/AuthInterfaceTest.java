@@ -1,18 +1,16 @@
 package ru.rnikonorov.mocking;
 
-import org.junit.Assert;
-import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.powermock.api.easymock.PowerMock;
 import org.powermock.core.classloader.annotations.PrepareForTest;
-import org.powermock.modules.junit4.PowerMockRunner;
+import org.powermock.modules.testng.PowerMockTestCase;
+import org.testng.Assert;
+import org.testng.annotations.Test;
 
 import static org.easymock.EasyMock.expect;
 import static org.powermock.api.easymock.PowerMock.createMock;
 
-@RunWith(PowerMockRunner.class)
 @PrepareForTest({AuthInterfaceImpl.class, InnerInterfaceImpl.class})
-public class AuthInterfaceTest {
+public class AuthInterfaceTest extends PowerMockTestCase {
 
     private static final String USER = "user";
     private static final String PASSWORD = "password";
